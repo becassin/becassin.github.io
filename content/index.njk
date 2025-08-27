@@ -3,27 +3,12 @@ const eleventyNavigation = {
 	key: "Home",
 	order: 1
 };
-
-const numberOfLatestPostsToShow = 3;
 ---
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<h1>Bienvenue</h1>
+Je suis Guillaume.<br><br>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
+Je suis un développeur web et musicien vivant actuellement à Lyon. Cela fait plus de 16 ans que je construit des sites internet, avec un focus tout particulier sur les sites de contenus à fort traffic, pour des clients tels qu'Amnesty International, UNESCO, BMW, Biomérieux.<br><br>
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
-{% endif %}
+Je travaille actuellement en freelance. Mon champ d'action est vaste, mais je me spécialise notamment sur Drupal (certifié Acquia) et Wordpress, que cela soit sur la partie back, front ou devops.<br><br>
 
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
+Autonome, rigoureux et bon communicant, j’ai accompagné de nombreuses équipes techniques et échange facilement avec tout les métiers du web.
